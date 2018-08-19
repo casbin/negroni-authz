@@ -9,31 +9,31 @@ Negroni-authz is an authorization middleware for [Negroni](https://github.com/ur
 
 ## Simple Example
 
-```Go
+```go
 package main
 
 import (
-	"fmt"
-	"net/http"
+    "fmt"
+    "net/http"
 
-	"github.com/casbin/casbin"
-	"github.com/casbin/negroni-authz"
-	"github.com/urfave/negroni"
+    "github.com/casbin/casbin"
+    "github.com/casbin/negroni-authz"
+    "github.com/urfave/negroni"
 )
 
 func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-		fmt.Fprintf(w, "Welcome to the home page!")
-	})
+    mux := http.NewServeMux()
+    mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
+        fmt.Fprintf(w, "Welcome to the home page!")
+    })
 
-	n := negroni.Classic()
+    n := negroni.Classic()
 
-	// load the casbin model and policy from files, database is also supported.
-	e := casbin.NewEnforcer("authz_model.conf", "authz_policy.csv")
-	n.Use(authz.Authorizer(e))
+    // load the casbin model and policy from files, database is also supported.
+    e := casbin.NewEnforcer("authz_model.conf", "authz_policy.csv")
+    n.Use(authz.Authorizer(e))
 
-	http.ListenAndServe(":3000", n)
+    http.ListenAndServe(":3000", n)
 }
 ```
 
