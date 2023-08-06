@@ -1,4 +1,4 @@
-Negroni-authz [![Build Status](https://travis-ci.org/casbin/negroni-authz.svg?branch=master)](https://travis-ci.org/casbin/negroni-authz) [![Coverage Status](https://coveralls.io/repos/github/casbin/negroni-authz/badge.svg?branch=master)](https://coveralls.io/github/casbin/negroni-authz?branch=master) [![GoDoc](https://godoc.org/github.com/casbin/negroni-authz?status.svg)](https://godoc.org/github.com/casbin/negroni-authz)
+Negroni-authz [![Coverage Status](https://coveralls.io/repos/github/casbin/negroni-authz/badge.svg?branch=master)](https://coveralls.io/github/casbin/negroni-authz?branch=master) [![GoDoc](https://godoc.org/github.com/casbin/negroni-authz?status.svg)](https://godoc.org/github.com/casbin/negroni-authz)
 ======
 
 Negroni-authz is an authorization middleware for [Negroni](https://github.com/urfave/negroni), it's based on [https://github.com/casbin/casbin](https://github.com/casbin/casbin).
